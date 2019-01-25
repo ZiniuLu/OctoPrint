@@ -3,12 +3,12 @@
 % Eingabe Zielposition ----------------------------------------------------
 % Zielpotistion eingeben
 	% Bewegungsbereich jeder Achse: 0...100,000 [mm]
-Zielposition = [300, 19000, 1000];
+Zielposition = [1000, 12000, 6000];
 
 % Parameter bei der Kommunikation -----------------------------------------
 % Kommunikationsfrequenz definieren
     % Simulationsschritt = 1s / f
-f = 10000;          % T = 1000000/f us
+f = 100000;          % T = 1000000/f us
 
 % Adresse jeder Station definieren
     % Adressebereich: 1...254
@@ -28,10 +28,11 @@ adr_Axis_3 = 3;
 
 % Parameter des Motors ----------------------------------------------------
 % Einmalige Bewegungsdauer der Achsen definieren
-delta_T = 10;       % [s]
+delta_T = 1;       % [s]
 
-% Maximale Beschleunigung des Motors definieren
+% Maximale Beschleunigung und Geschwindigkeit des Motors definieren
 a_Max = 1000;       % [mm/s^2]
+v_Max = 1000;       % [mm/s]
 
 % Aufruf Simulationsmodell ------------------------------------------------
 % Simulink-Datei aufrufen
